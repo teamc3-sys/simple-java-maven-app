@@ -54,9 +54,9 @@ pipeline {
                 #!/bin/bash
 
                 JENKINS_URL=https://jenkins.example.com
-                JOB_NAME=my_job
-                USER=my_user
-                TOKEN=my_token
+                JOB_NAME=jobs-build-docker-maven
+                USER=ramisistemas
+                TOKEN=11de48d3823dac6fd325c81be7c2503d52
 
                 curl -X POST $JENKINS_URL/job/$JOB_NAME/build \
                   --user $USER:$TOKEN \
