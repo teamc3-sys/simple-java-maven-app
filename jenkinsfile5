@@ -54,7 +54,7 @@ pipeline {
                 #!/bin/bash
 
                 JENKINS_URL=http://127.0.0.1:32000
-                JOB_NAME=jobs-build-docker-maven
+                JOB_NAME=job-Java-App-con-Maven
                 USER=ramisistemas
                 TOKEN=11de48d3823dac6fd325c81be7c2503d52
 
