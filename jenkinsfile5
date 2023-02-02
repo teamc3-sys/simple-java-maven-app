@@ -50,7 +50,19 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+               sh '''
+                #!/bin/bash
+
+                JENKINS_URL=https://jenkins.example.com
+                JOB_NAME=my_job
+                USER=my_user
+                TOKEN=my_token
+
+                curl -X POST $JENKINS_URL/job/$JOB_NAME/build \
+                  --user $USER:$TOKEN \
+                  --data-urlencode json='{"parameter": [{"name":"id", "value":"123"}, {"name":"verbosity", "value":"high"}]}'
+                '''
+                //sh './jenkins/scripts/deliver.sh'
             }
         }
     }
