@@ -11,4 +11,7 @@ you'll be creating yourself during the tutorial and the `scripts` subdirectory
 contains a shell script with commands that are executed when Jenkins processes
 the "Deliver" stage of your Pipeline.
 
-El directorio `jenkins` contiene un ejemplo de `Jenkinsfile` (es decir, Pipeline) Te crearás a ti mismo durante el tutorial y el subdirectorio contiene un script de shell con comandos que se ejecutan cuando Jenkins procesa la etapa "Entregar" de su canalización.  
+El directorio `jenkins` contiene un ejemplo de `Jenkinsfile` (es decir, Pipeline)
+Te crearás a ti mismo durante el tutorial y el `scripts`subdirectorio
+contiene un script de shell con comandos que se ejecutan cuando Jenkins procesa
+la etapa "Entregar" de su Pipeline.  
