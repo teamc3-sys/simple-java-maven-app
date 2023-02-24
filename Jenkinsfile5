@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build on server') {
             steps {
-               sh '''curl -X POST --USER grupoc3:'11ba2b0148d22936fd095b2d7037c96a8a' http://127.0.0.1:8080/job/job-Java-App-con-Maven/build'''
+               sh '''curl -X POST --USER ramisistemas:11ffe52216b6e854110e01015ca6a9151b http://127.0.0.1:8080/job/job-Java-App-con-Maven/build'''
             }
         }
     }
