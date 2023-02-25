@@ -35,7 +35,7 @@ metadata:
 spec:
   ports:
   - port: 81
-    targetPort: 9376
+    targetPort: 30780
     name: micro-hola
   type: ClusterIP
   selector:
