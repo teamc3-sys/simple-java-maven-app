@@ -35,6 +35,6 @@ spec:
     - protocol: "TCP"
       port: 30001       # The port inside the cluster
       targetPort: 30001  # The port exposed by the service
-  type:  ClusterIP      # Type of service
+  type:  LoadBalancer      # Type of service
   selector:
     app: micro-hola
