@@ -36,6 +36,6 @@ spec:
   ports:
   - port: 80
     name: micro-hola
-  type: NodePort
+  type: ClusterIP
   selector:
     app: micro-hola   
