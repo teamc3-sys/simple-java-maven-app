@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loopback-kubernetes
+  name: micro-hola
   namespace: micro
 spec:
   selector:
     matchLabels:
-      app: loopback-kubernetes
+      app: micro-hola
   replicas: 1
   template:
     metadata:
       labels:
-        app: loopback-kubernetes
+        app: micro-hola
     spec:
       containers:
         - name: loopback-kubernetes
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: loopback-kubernetes-service
+  name: servicio-hola
   namespace: micro
 spec:
   ports:
@@ -32,4 +32,4 @@ spec:
       targetPort: 3000  # The port exposed by the service
   type: NodePort        # Type of service
   selector:
-    app: loopback-kubernetes
+    app: micro-hola
