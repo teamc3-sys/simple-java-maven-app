@@ -33,7 +33,7 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 80       # The port inside the cluster
+      port: 81       # The port inside the cluster
     # targetPort: 30001  # The port exposed by the service
   type:  LoadBalancer      # Type of service
   selector:
