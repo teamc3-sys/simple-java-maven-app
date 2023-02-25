@@ -23,7 +23,7 @@ spec:
           image: ramisistemas/mavenjenkins:3.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 30001
+            - containerPort: 9376
 ---
 apiVersion: v1
 kind: Service
