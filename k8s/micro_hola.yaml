@@ -23,7 +23,7 @@ spec:
           image: ramisistemas/mavenjenkins:3.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8081
+            - containerPort: 9500
 ---
 apiVersion: v1
 kind: Service
@@ -34,7 +34,7 @@ metadata:
     app: micro-hola
 spec:
   ports:
-  - port: 9000
+  - port: 9500
     name: micro-hola
   type: NodePort
   selector:
