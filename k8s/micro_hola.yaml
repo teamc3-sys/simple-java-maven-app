@@ -23,19 +23,21 @@ spec:
           image: ramisistemas/mavenjenkins:3.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 81
+            - containerPort: 9080
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: servicio-hola-clusterip
   namespace: micro
-  labels:
-    app: micro-hola
 spec:
-  ports:
-  - port: 81
-    name: micro-hola
-  type: ClusterIP
+  type: NodePort
   selector:
-    app: micro-hola   
+    app: micro-hola
+  ports:
+  - protocol: TCP
+    port: 9080
+    targetPort: 9080
+    nodePort: 31000
+
+--- 
