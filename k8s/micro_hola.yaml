@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: micro-svc
+  name: servicio-hola-clusterip
   namespace: micro
   labels:
     app: micro-hola
