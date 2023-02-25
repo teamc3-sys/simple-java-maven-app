@@ -28,13 +28,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: servicio-hola-clusterip
+  name: micro-svc
   namespace: micro
+  labels:
+    app: micro-hola
 spec:
-  type: ClusterIP
-  selector:
-    app.kubernetes.io/name: micro-hola
   ports:
-    - protocol: TCP
-      port: 8081
-     #targetPort: 9376      
+  - port: 9000
+    name: micro-hola
+  type: NodePort
+  selector:
+    app: micro-hola   
