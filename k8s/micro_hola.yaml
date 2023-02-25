@@ -29,11 +29,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: servicio-hola-clusterip
+  namespace: micro
 spec:
   ports:
     - protocol: "TCP"
-      port: 8090       # The port inside the cluster
-      targetPort: 8090  # The port exposed by the service
-  type: LoadBalancer       # Type of service
+      #port: 8090       # The port inside the cluster
+      #targetPort: 8090  # The port exposed by the service
+  type: ClusterIP       # Type of service
   selector:
     app: micro-hola
