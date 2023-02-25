@@ -31,10 +31,10 @@ metadata:
   name: servicio-hola-clusterip
   namespace: micro
 spec:
+  type: LoadBalancer
   selector:
     app.kubernetes.io/name: micro-hola
   ports:
     - protocol: TCP
       port: 81
-      targetPort: 9376
-      type: NodePort
+     #targetPort: 9376      
