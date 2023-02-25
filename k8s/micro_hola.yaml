@@ -1,7 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: micro
+---  
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: micro-hola-deployment
+  namespace: micro
 spec:
   selector:
     matchLabels:
@@ -26,8 +32,8 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 32000       # The port inside the cluster
-      targetPort: 32000  # The port exposed by the service
-  type: LoadBalancer       # Type of service
+      port: 8090       # The port inside the cluster
+      targetPort: 8090  # The port exposed by the service
+  type: NodePort       # Type of service
   selector:
     app: micro-hola
