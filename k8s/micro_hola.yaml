@@ -31,10 +31,9 @@ metadata:
   name: servicio-hola-clusterip
   namespace: micro
 spec:
-  ports:
-    - protocol: "TCP"
-      port: 81       # The port inside the cluster
-    # targetPort: 30001  # The port exposed by the service
-  type:  LoadBalancer      # Type of service
   selector:
-    app: micro-hola
+    app.kubernetes.io/name: MyApp
+  ports:
+    - protocol: TCP
+      port: 81
+      targetPort: 9376
