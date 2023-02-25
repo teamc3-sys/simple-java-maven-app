@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: micro-hola
-          image: ramisistemas/mavenjenkins
+          image: ramisistemas/mavenjenkins:3.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
