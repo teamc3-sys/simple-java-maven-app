@@ -38,6 +38,5 @@ spec:
   - protocol: TCP
     port: 9080
     targetPort: 9080
-    NodePort: 31000
-
+    
 --- 
