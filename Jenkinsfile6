@@ -31,7 +31,6 @@ pipeline {
             steps {
                 script{
                  sh"""
-                      cd /test-pipeline-maven/target
                       docker login -u ramisistemas -p dckr_pat_UU4G2KcmDJkNfGnJhTwE14XlQfs
                       sudo docker build -t ramisistemas/mavenjenkins:3.1 .
                       docker push ramisistemas/mavenjenkins:3.1
