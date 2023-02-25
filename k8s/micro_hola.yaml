@@ -17,7 +17,7 @@ spec:
           image: ramisistemas/mavenjenkins:3.0
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8081
+            - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -26,8 +26,8 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 8081       # The port inside the cluster
-      targetPort: 8081  # The port exposed by the service
+      port: 32000       # The port inside the cluster
+      targetPort: 32000  # The port exposed by the service
   type: LoadBalancer       # Type of service
   selector:
     app: micro-hola
