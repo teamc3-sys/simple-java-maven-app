@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: loopback-kubernetes
-          image: ramisistemas/mavenjenkins:3.1
+          image: ramisistemas/mavenjenkins:1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
