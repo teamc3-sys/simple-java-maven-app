@@ -32,7 +32,7 @@ metadata:
   namespace: micro
 spec:
   selector:
-    app.kubernetes.io/name: MyApp
+    app.kubernetes.io/name: micro-hola
   ports:
     - protocol: TCP
       port: 81
