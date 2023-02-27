@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
@@ -46,7 +46,7 @@ pipeline {
                 sh """
                 az login --service-principal --username 8eca206b-667a-4436-b8a8-cf554837c081 --password xlK8Q~Gyc4VSLqrReh314L1KDAz971ApMEE6Iaja --tenant 374fe296-bb62-48b2-b064-75f1b0fae7ce 
                 az account set --subscription 33414221-3b85-41aa-b5d1-5d349e46fee3
-                az aks get-credentials --resource-group TestDespliegue --name cluster
+                az aks get-credentials --resource-group GrupoC3 --name GrupoC3
                 cd k8s
                 kubectl apply -f micro_hola.yaml
                 """
